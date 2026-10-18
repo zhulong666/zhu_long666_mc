@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>zhu_long_mc · 个人介绍</title>
+    <!-- 【新增】将浏览器标签页的图标替换为您的像素头像 -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOaSURBVHhe7dqxbVRREIVhN4FzZ06cOnIT0AQRZVAJRVCARUYFCJwRmQQjkAjQwkPz46Pln93Ri9bSG+lLnuaeO3PlwJZ8dqx2v37uDqm2tq6vr3eHVNvqsplSta0vC03V1pYtnaptddlMqdrWl4WmamvLlk7VtrpsplRt68tCU7W1ZUunaltdNlOqtnl9f7jbJQtN93fv/rq4uFC2dLq8vGxZHrjXZkr7+9Safe0fsNC0PcD2AE/8AfYbDuHSdHV1ddAyrC0OWxzLWctMNpPN3tkewD527DIbKj35B8iB3r+++Y8NlZZz9h32KDh2dmEz5cy2U9oewD6mDLPLbKi0nLPvsMVx7OzCZsqZbae0PYB9TBlml9lQaTln32GL49jZhc2UM9tO6egfKxlmlyH79tngsDthWbAZkH2Wm7YHsI8pw2yBiU9vnrfsxxKWNZEz205pewD7mDLMLpuwxWGLw7ImcmbbKW0PYB9ThtllE7Y4bHFY1kTObDul7QH2Kw/vs8smbHHY4rCsCZsdtWZfFjjxcPuyZf0TlgXrn6g1+7JDEzYkrH/CsmD9E7VmX3ZowoaE9U9YFqx/otbsyw5N2JCw/gnLgvVP1Jp92aEJGxLWP2FZsP6JWrMvOzRhQ8L6JywL1j9Ra/ZlhyZsSFj/hGXB+idqzb7sEM7Pz1exrAnLmrAs1Jp92SHYZROWNWFZE5aFWrMvOwS7bMKyJixrwrJQa/Zlh2CXTVjWhGVNWBZqzb7sEOyyCcuasKwJy0Kt2Zcdgl02YVkTljVhWag1+7JDsMsmLGvCsiYsC7VmX/YnJO4/3rZe3TxrWdaEZcFmgGWh1uzLDsEugw0Jy5qwLNgMsCzUmn3ZIdhlsCFhWROWBZsBloVasy87BLsMNiQsa8KyYDPAslBr9mWHYJfBhoRlTVgWbAZYFmrNvuwQ7DLYkLCsCcuCzQDLQq3Zlx2CXQYbEpY1YVmwGWBZqDX7Wv4vp/Pj4XPr69sXLeufsCxYP2x21Jp92SHYZbAhYf0TlgXrh82OWvOx7J8LUx62y2BDwvonLAvWj5zZdkrbA9jHlGF2GWxIWP+EZcH6kTPbTml7APuYMswugw0J65+wLFg/cmbbKR19gG9fPvxjl52inNl2StsD2MeUYXbZKcqZbadUvw08Vh7eZ5edIpsdtWZfdgh22Smy2VFr9mWHYJedIpsdtWZfdgh22Smy2VFrbrXVVlv9qbOz3ylueZR111W4AAAAAElFTkSuQmCC">
+    
+    <!-- 引入Google Fonts，提升现代感 (Inter字体) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ========== 全局重置与基础样式 ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #e6f0ff 0%, #b8d8f0 100%);
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 背景光晕 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(circle, rgba(160, 210, 255, 0.5) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -15%;
+            right: -10%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(120, 190, 255, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(70px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ========== 真正的全透毛玻璃卡片样式 ========== */
+        .glass-card {
+            position: relative;
+            z-index: 10;
+            max-width: 680px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15); 
+            backdrop-filter: blur(24px) saturate(150%);
+            -webkit-backdrop-filter: blur(24px) saturate(150%);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.4); 
+            box-shadow: 0 25px 45px -15px rgba(70, 130, 200, 0.2),
+                        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            padding: 2.8rem 2.5rem;
+            color: #1a3a5c;
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.4s ease;
+            animation: cardAppear 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            margin-bottom: 2.5rem; 
+        }
+
+        .glass-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 35px 55px -18px rgba(70, 140, 220, 0.3),
+                        0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+        }
+
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* ========== 统一的按钮样式（通透感毛玻璃按钮） ========== */
+        .unified-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: rgba(255, 255, 255, 0.3); 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #1a3a5c;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
+            box-shadow: 0 8px 18px -6px rgba(70, 130, 210, 0.15);
+            cursor: pointer;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .unified-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 30px -8px rgba(70, 140, 230, 0.3);
+            transform: scale(1.03) translateY(-2px);
+        }
+
+        .unified-btn:active {
+            transform: scale(0.98);
+        }
+
+        .unified-btn i {
+            font-size: 1.4rem;
+            color: #1e4f86;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+            flex-shrink: 0;
+        }
+
+        /* ========== 第一屏：个人信息卡片 ========== */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            margin-bottom: 2.2rem;
+            flex-wrap: wrap;
+        }
+
+        .avatar {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 20px -6px rgba(100, 160, 230, 0.3);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 2px solid #ffffff;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            image-rendering: -moz-crisp-edges; 
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated; 
+        }
+
+        .avatar:hover {
+            transform: scale(1.04);
+        }
+
+        .name-title h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(120deg, #1e4a7a, #2b6fae);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 15px rgba(255, 255, 255, 0.5);
+            white-space: nowrap;
+        }
+
+        .name-title .subhead {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #2b5a86;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            opacity: 0.95;
+            white-space: nowrap;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1.4rem;
+            background: rgba(255, 255, 255, 0.25); 
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.45);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            font-size: 1.4rem;
+            width: 2rem;
+            text-align: center;
+            color: #2b6fae;
+            flex-shrink: 0;
+        }
+
+        .contact-text {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #1f3e5e;
+            letter-spacing: 0.3px;
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+
+        .action-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ========== 第二、第三屏：内容卡片 ========== */
+        .content-card {
+            text-align: center;
+            animation-delay: 0.1s;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e4a7a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .card-title i {
+            color: #2b6fae;
+        }
+
+        .resource-desc {
+            font-size: 1rem;
+            color: #2b5a86;
+            margin-bottom: 1.8rem;
+            line-height: 1.5;
+        }
+
+        /* 资源包信息列表 */
+        .pack-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .pack-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            font-size: 1.05rem;
+            color: #1f3e5e;
+        }
+
+        .pack-info-item i {
+            color: #2b6fae;
+            font-size: 1.1rem;
+            width: 1.2rem;
+            text-align: center;
+        }
+
+        .pack-info-item strong {
+            font-weight: 600;
+            color: #1e4a7a;
+            margin-right: 0.3rem;
+        }
+
+        /* ========== 响应式调整 ========== */
+        @media (max-width: 900px) and (min-width: 601px) {
+            .glass-card { max-width: 620px; padding: 2.5rem 2.2rem; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 2rem 0.8rem; }
+            .glass-card { padding: 1.8rem 1.5rem; border-radius: 1.8rem; max-width: 100%; margin-bottom: 1.5rem; }
+            .profile-header { flex-direction: column; text-align: center; gap: 0.8rem; margin-bottom: 1.8rem; flex-wrap: nowrap; }
+            .avatar { width: 80px; height: 80px; }
+            .name-title h1 { font-size: 1.8rem; white-space: normal; }
+            .name-title .subhead { justify-content: center; font-size: 1rem; white-space: normal; }
+            .contact-item { padding: 0.7rem 1.2rem; gap: 0.8rem; }
+            .contact-item i { font-size: 1.2rem; width: 1.8rem; }
+            .contact-text { font-size: 1rem; }
+            
+            .card-title { font-size: 1.3rem; }
+            .pack-info-item { flex-direction: column; gap: 0.2rem; text-align: center; } 
+            
+            .unified-btn { font-size: 1rem; padding: 0.9rem 1rem; gap: 0.5rem; }
+            .unified-btn i { font-size: 1.2rem; }
+        }
+
+        @media (max-width: 380px) {
+            .glass-card { padding: 1.5rem 1.2rem; border-radius: 1.5rem; }
+            .contact-item { flex-wrap: wrap; gap: 0.5rem; padding: 0.6rem 1rem; }
+            .contact-text { font-size: 0.95rem; }
+            .avatar { width: 70px; height: 70px; }
+            .name-title h1 { font-size: 1.6rem; }
+            .unified-btn { font-size: 0.95rem; padding: 0.8rem 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= 第一屏：个人信息卡片 ================= -->
+    <div class="glass-card profile-card">
+        <div class="profile-header">
+            <div class="avatar">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOaSURBVHhe7dqxbVRREIVhN4FzZ06cOnIT0AQRZVAJRVCARUYFCJwRmQQjkAjQwkPz46Pln93Ri9bSG+lLnuaeO3PlwJZ8dqx2v37uDqm2tq6vr3eHVNvqsplSta0vC03V1pYtnaptddlMqdrWl4WmamvLlk7VtrpsplRt68tCU7W1ZUunaltdNlOqtnl9f7jbJQtN93fv/rq4uFC2dLq8vGxZHrjXZkr7+9Safe0fsNC0PcD2AE/8AfYbDuHSdHV1ddAyrC0OWxzLWctMNpPN3tkewD527DIbKj35B8iB3r+++Y8NlZZz9h32KDh2dmEz5cy2U9oewD6mDLPLbKi0nLPvsMVx7OzCZsqZbae0PYB9TBlml9lQaTln32GL49jZhc2UM9tO6egfKxlmlyH79tngsDthWbAZkH2Wm7YHsI8pw2yBiU9vnrfsxxKWNZEz205pewD7mDLMLpuwxWGLw7ImcmbbKW0PYB9ThtllE7Y4bHFY1kTObDul7QH2Kw/vs8smbHHY4rCsCZsdtWZfFjjxcPuyZf0TlgXrn6g1+7JDEzYkrH/CsmD9E7VmX3ZowoaE9U9YFqx/otbsyw5N2JCw/gnLgvVP1Jp92aEJGxLWP2FZsP6JWrMvOzRhQ8L6JywL1j9Ra/ZlhyZsSFj/hGXB+idqzb7sEM7Pz1exrAnLmrAs1Jp92SHYZROWNWFZE5aFWrMvOwS7bMKyJixrwrJQa/Zlh2CXTVjWhGVNWBZqzb7sEOyyCcuasKwJy0Kt2Zcdgl02YVkTljVhWag1+7JDsMsmLGvCsiYsC7VmX/YnJO4/3rZe3TxrWdaEZcFmgGWh1uzLDsEugw0Jy5qwLNgMsCzUmn3ZIdhlsCFhWROWBZsBloVasy87BLsMNiQsa8KyYDPAslBr9mWHYJfBhoRlTVgWbAZYFmrNvuwQ7DLYkLCsCcuCzQDLQq3Zlx2CXQYbEpY1YVmwGWBZqDX7Wv4vp/Pj4XPr69sXLeufsCxYP2x21Jp92SHYZbAhYf0TlgXrh82OWvOx7J8LUx62y2BDwvonLAvWj5zZdkrbA9jHlGF2GWxIWP+EZcH6kTPbTml7APuYMswugw0J65+wLFg/cmbbKR19gG9fPvxjl52inNl2StsD2MeUYXbZKcqZbadUvw08Vh7eZ5edIpsdtWZfdgh22Smy2VFr9mWHYJedIpsdtWZfdgh22Smy2VFrbrXVVlv9qbOz3ylueZR111W4AAAAAElFTkSuQmCC" alt="头像">
+            </div>
+            <div class="name-title">
+                <h1>zhu_long_mc</h1>
+                <div class="subhead">
+                    <i class="fas fa-cube" style="font-size: 1rem; color: #2b6fae;"></i>
+                    <span>我的世界资深玩家</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span class="contact-text">15710662365</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="contact-text">m15710662365@163.com</span>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <a href="https://space.bilibili.com/3690994056825169/upload/video" target="_blank" rel="noopener noreferrer" class="unified-btn">
+                <i class="fab fa-bilibili"></i>
+                <span>访问我的B站主页</span>
+                <i class="fas fa-arrow-right" style="font-size: 1rem; opacity: 0.8;"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- ================= 第二屏：资源分享卡片 ================= -->
+    <div class="glass-card content-card">
+        <div class="card-title">
+            <i class="fas fa-cloud-download-alt"></i>
+            <span>资源分享</span>
+        </div>
+        <div class="resource-desc">
+            收集了一些资源，欢迎下载使用。
+        </div>
+        <a href="https://pan.quark.cn/s/607c9a1aba68?pwd=6Eci" target="_blank" rel="noopener noreferrer" class="unified-btn">
+            <i class="fas fa-box-open"></i>
+            <span>点击前往夸克网盘 (提取码: 6Eci)</span>
+        </a>
+    </div>
+
+    <!-- ================= 第三屏：自制资源包卡片 ================= -->
+    <div class="glass-card content-card">
+        <div class="card-title">
+            <i class="fas fa-cubes"></i>
+            <span>我的世界自制资源包</span>
+        </div>
+        
+        <div class="pack-info-list">
+            <div class="pack-info-item">
+                <i class="fas fa-tag"></i>
+                <div><strong>资源包名称：</strong>PVP Plus</div>
+            </div>
+            <div class="pack-info-item">
+                <i class="fas fa-gamepad"></i>
+                <div><strong>适配版本：</strong>1.21.1 - 1.21.11</div>
+            </div>
+        </div>
+
+        <a href="https://wwbjv.lanzout.com/i0oC44cf2v1g" target="_blank" rel="noopener noreferrer" class="unified-btn">
+            <i class="fas fa-download"></i>
+            <span>立即下载 (密码: 4jww)</span>
+        </a>
+    </div>
+
+</body>
+</html>
